@@ -1,6 +1,6 @@
 CREATE PROCEDURE [dbo].[SP_OKSUSU_LOGIN]    
 (   
-	   @LOGIN_ID       NVARCHAR(20),           -- 로그인ID      
+	@LOGIN_ID       NVARCHAR(20),           -- 로그인ID      
     @LOGIN_PW       NVARCHAR(80)            -- 비밀번호      
 )    
 --WITH ENCRYPTION    
@@ -36,14 +36,17 @@ BEGIN
     SET @RESULT = 'OK'      
     
     SELECT @RESULT AS RESULT,
-           *
-      FROM OKSUSU_USER 	 
-     WHERE ID = @LOGIN_ID
-      AND [PASSWORD] = @LOGIN_PW
+           U.*,
+           CONVERT(NVARCHAR, C.CARTCOUNT) AS CARTCOUNT
+      FROM OKSUSU_USER AS U
+           LEFT OUTER JOIN ( SELECT ID, COUNT(ITEM_CD) AS CARTCOUNT
+                               FROM OKSUSU_CART
+                              GROUP BY ID ) AS C
+                        ON U.ID = C.ID
+     WHERE U.ID = @LOGIN_ID
+       AND U.[PASSWORD] = @LOGIN_PW
   
     SET NOCOUNT OFF      
     
 END    
 GO
-
-
