@@ -5,7 +5,7 @@ CREATE PROCEDURE [dbo].[SP_OKSUSU_ITEM_DML]
    @ITEM_NM           NVARCHAR(50), 
    @ITEM_DC           NVARCHAR(1000), 
    @ORIGINAL_IMG_NAME NVARCHAR(260), 
-   @STORED_IMG_NAME   NVARCHAR(36),
+   @STORED_IMG_NAME   NVARCHAR(40),
    @GOOD              INT,
    @PRICE             NUMERIC(18,0),
    @ITEM_TYPE         NVARCHAR(10),
@@ -31,7 +31,7 @@ BEGIN
                               VIEW_YN )
          VALUES ( @ITEM_CD, @ITEM_NM, @ITEM_DC, @ORIGINAL_IMG_NAME, @STORED_IMG_NAME,
                   @GOOD, GETDATE(), @INSERT_ID, @PRICE, @ITEM_TYPE,
-                  ISNULL(@VIEW_YN, '1') )           
+                  CASE WHEN ISNULL(@VIEW_YN, 't') = 'f' then '' ELSE ISNULL(@VIEW_YN, 't') END )           
   END
   ELSE IF (@DML_FG = 'U')
   BEGIN
@@ -44,7 +44,7 @@ BEGIN
            GOOD = @GOOD,                     
            PRICE = @PRICE, 
            ITEM_TYPE = @ITEM_TYPE,
-           VIEW_YN = ISNULL(@VIEW_YN, '1')
+           VIEW_YN = CASE WHEN ISNULL(@VIEW_YN, 't') = 'f' then '' ELSE ISNULL(@VIEW_YN, 't') END
      WHERE ITEM_CD = @ITEM_CD
   END
   ELSE IF (@DML_FG = 'D')
@@ -59,5 +59,3 @@ END
 
 
 GO
-
-
