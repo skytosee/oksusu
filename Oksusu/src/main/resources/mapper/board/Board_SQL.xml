@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="board">
+     
+	<select id="selectBoardList" parameterType="hashmap" resultType="hashmap">
+        <![CDATA[
+           SELECT
+                IDX,
+			    TITLE,
+			    HIT_CNT,
+			    CREA_DTM
+			FROM
+			    OKSUSU_BOARD
+			WHERE
+			    DEL_GB = 'N'    
+			ORDER BY IDX DESC
+        ]]>
+    </select>
+    
+    <insert id="insertBoard" parameterType="hashmap">
+        <selectKey keyProperty="IDX" resultType="string" order="AFTER">
+			SELECT MAX(IDX) FROM OKSUSU_BOARD
+		</selectKey>
+    <![CDATA[         
+        INSERT INTO OKSUSU_BOARD
+        ( 
+            TITLE, 
+            CONTENTS, 
+            HIT_CNT, 
+            DEL_GB, 
+            CREA_ID
+        )
+        VALUES
+        ( 
+            #{TITLE}, 
+            #{CONTENTS}, 
+            0, 
+            'N', 
+            'Admin'
+        )
+    ]]>
+	</insert>
+	
+	<update id="updateHitCnt" parameterType="hashmap">
+    <![CDATA[
+        UPDATE OKSUSU_BOARD 
+        SET
+            HIT_CNT = ISNULL(HIT_CNT, 0) + 1
+        WHERE
+            IDX = #{IDX}    
+    ]]>
+	</update>
+ 
+	<select id="selectBoardDetail" parameterType="hashmap" resultType="hashmap">
+	    <![CDATA[
+	        SELECT
+	            IDX,
+	            HIT_CNT,
+	            CREA_ID,
+	            CREA_DTM,
+	            TITLE,
+	            CONTENTS
+	        FROM
+	            OKSUSU_BOARD
+	        WHERE
+	            IDX = #{IDX}        
+	    ]]>
+	</select>
+	
+	<update id="updateBoard" parameterType="hashmap">
+    <![CDATA[
+        UPDATE OKSUSU_BOARD 
+        SET
+            TITLE = #{TITLE},
+            CONTENTS = #{CONTENTS}
+        WHERE
+            IDX = #{IDX}    
+    ]]>
+	</update>
+	
+	<update id="deleteBoard" parameterType="hashmap">
+    <![CDATA[
+        UPDATE OKSUSU_BOARD
+        SET
+            DEL_GB = 'Y'
+        WHERE
+            IDX = #{IDX}
+    ]]>
+	</update>
+	
+	<insert id="insertFile" parameterType="hashmap">
+    <![CDATA[
+        INSERT INTO OKSUSU_FILE
+        (
+            BOARD_IDX,
+            ORIGINAL_FILE_NAME,
+            STORED_FILE_NAME,
+            FILE_SIZE,
+            CREA_ID
+        )
+        VALUES
+        (
+            #{BOARD_IDX},
+            #{ORIGINAL_FILE_NAME},
+            #{STORED_FILE_NAME},
+            #{FILE_SIZE},
+            'Admin'
+        )
+    ]]>
+	</insert>
+	
+	<select id="selectFileList" parameterType="hashmap" resultType="hashmap">
+    <![CDATA[
+        SELECT
+            IDX,
+            ORIGINAL_FILE_NAME,
+            ROUND(FILE_SIZE/1024,1) AS FILE_SIZE
+        FROM
+            OKSUSU_FILE
+        WHERE
+            BOARD_IDX = #{IDX}
+            AND DEL_GB = 'N'
+    ]]>
+    </select>
+    
+    <select id="selectFileInfo" parameterType="hashmap" resultType="hashmap">
+    <![CDATA[
+        SELECT
+            STORED_FILE_NAME,
+            ORIGINAL_FILE_NAME
+        FROM
+            OKSUSU_FILE
+        WHERE
+            IDX = #{IDX}
+    ]]>
+    </select>
+	     
+</mapper>

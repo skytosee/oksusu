@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="order">
+
+    <select id="selectCartList" parameterType="hashmap" resultType="hashmap">	
+     { #{returnVal} = call SP_OKSUSU_CART_SELECT ( #{ID, jdbcType = VARCHAR, mode = IN}
+                                                 )}	   
+	</select>
+	
+	<insert id="saveCartList" parameterType="hashmap">	
+     { call SP_OKSUSU_CART_DML ( #{DML_FG, jdbcType = VARCHAR, mode = IN},
+                                 #{ID, jdbcType = VARCHAR, mode = IN},
+                                 #{ITEM_CD, jdbcType = VARCHAR, mode = IN},           
+                                 #{ITEM_QT, jdbcType = NUMERIC, mode = IN}                          
+                               )}	   
+	</insert>
+	
+	<select id="selectOrderList" parameterType="hashmap" resultType="hashmap">	
+     { #{returnVal} = call SP_OKSUSU_ORDER_SELECT ( #{ID, jdbcType = VARCHAR, mode = IN},
+                                                    #{ORDER_NB, jdbcType = VARCHAR, mode = IN}
+                                                  )}	   
+	</select>
+	
+	<insert id="saveOrderList" parameterType="hashmap">	
+     { call SP_OKSUSU_ORDER_DML ( #{DML_FG, jdbcType = VARCHAR, mode = IN},
+                                  #{ID, jdbcType = VARCHAR, mode = IN},
+                                  #{ORDER_NB, jdbcType = VARCHAR, mode = IN},
+                                  #{ITEM_CD, jdbcType = VARCHAR, mode = IN},      
+                                  #{ITEM_NM, jdbcType = VARCHAR, mode = IN},     
+                                  #{ITEM_QT, jdbcType = NUMERIC, mode = IN},
+                                  #{ITEM_AM, jdbcType = NUMERIC, mode = IN},
+                                  #{NAME, jdbcType = VARCHAR, mode = IN},     
+                                  #{PHONE, jdbcType = VARCHAR, mode = IN},     
+                                  #{ZIP, jdbcType = VARCHAR, mode = IN},     
+                                  #{ADDR, jdbcType = VARCHAR, mode = IN},
+                                  #{ORDER_FG, jdbcType = VARCHAR, mode = IN}                            
+                               )}	   
+	</insert>
+	
+	<update id="saveOrderFg" parameterType="hashmap">	
+     { call SP_OKSUSU_ORDER_FG_UPDATE ( #{ORDER_NB, jdbcType = VARCHAR, mode = IN},
+                                        #{ORDER_FG, jdbcType = VARCHAR, mode = IN}                          
+                                      )}	   
+	</update>
+   
+</mapper>

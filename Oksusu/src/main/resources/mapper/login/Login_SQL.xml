@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="login">
+  
+    <insert id="insertUser" parameterType="oksusu.common.model.LoginModel">
+    <![CDATA[         
+        INSERT INTO OKSUSU_USER
+        ( 
+            ID, 
+            PASSWORD, 
+            NAME, 
+            EMAIL, 
+            PHONE,
+            ZIP,
+            ADDR
+        )
+        VALUES
+        ( 
+            #{userId}, 
+            #{password},
+            #{userName},
+            #{email},
+            #{phone},
+            #{zip},
+            #{address}
+        )
+    ]]>
+	</insert>
+  
+    <select id="loginUser" parameterType="hashmap" resultType="hashmap">	
+     { #{returnVal} = call SP_OKSUSU_LOGIN ( #{LOGIN_ID, jdbcType = VARCHAR, mode = IN},
+                                             #{LOGIN_PW, jdbcType = VARCHAR, mode = IN}
+                                           )}	   
+	</select>
+	
+	     
+</mapper>

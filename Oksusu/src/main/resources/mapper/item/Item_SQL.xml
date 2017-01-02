@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="item">
+
+    <select id="selectItemList" parameterType="hashmap" resultType="hashmap">	
+     { #{returnVal} = call SP_OKSUSU_ITEM_SELECT ( #{TYPE, jdbcType = VARCHAR, mode = IN},
+                                                   #{VIEW_YN, jdbcType = VARCHAR, mode = IN},
+                                                   #{ITEM_CD, jdbcType = VARCHAR, mode = IN}
+                                                 )}	   
+	</select>
+	
+	<insert id="saveItemList" parameterType="hashmap">	
+     { call SP_OKSUSU_ITEM_DML ( #{DML_FG, jdbcType = VARCHAR, mode = IN},
+                                 #{ITEM_CD, jdbcType = VARCHAR, mode = IN},
+                                 #{ITEM_NM, jdbcType = VARCHAR, mode = IN},
+                                 #{ITEM_DC, jdbcType = VARCHAR, mode = IN},
+                                 #{ORIGINAL_IMG_NAME, jdbcType = VARCHAR, mode = IN},
+                                 #{STORED_IMG_NAME, jdbcType = VARCHAR, mode = IN},
+                                 #{GOOD, jdbcType = INTEGER, mode = IN},
+                                 #{PRICE, jdbcType = NUMERIC, mode = IN},
+                                 #{ITEM_TYPE, jdbcType = VARCHAR, mode = IN},
+                                 #{VIEW_YN, jdbcType = VARCHAR, mode = IN},
+                                 #{INSERT_ID, jdbcType = VARCHAR, mode = IN}                           
+                               )}	   
+	</insert>
+   
+</mapper>
