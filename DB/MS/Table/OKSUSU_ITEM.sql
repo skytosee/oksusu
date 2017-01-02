@@ -3,7 +3,7 @@ CREATE TABLE [dbo].[OKSUSU_ITEM](
 	[ITEM_NM] [nvarchar](50) NOT NULL,
 	[ITEM_DC] [nvarchar](1000) NOT NULL,
 	[ORIGINAL_IMG_NAME] [nvarchar](260) NULL,
-	[STORED_IMG_NAME] [nvarchar](36) NULL,
+	[STORED_IMG_NAME] [nvarchar](40) NULL,
 	[GOOD] [int] NULL,
 	[INSERT_DT] [datetime] NOT NULL,
 	[INSERT_ID] [nvarchar](30) NOT NULL,
@@ -20,5 +20,3 @@ GO
 
 ALTER TABLE [dbo].[OKSUSU_ITEM] ADD  DEFAULT (getdate()) FOR [INSERT_DT]
 GO
-
-

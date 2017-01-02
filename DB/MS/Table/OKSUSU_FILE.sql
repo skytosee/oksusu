@@ -2,7 +2,7 @@ CREATE TABLE [dbo].[OKSUSU_FILE](
 	[IDX] [int] IDENTITY(1,1) NOT NULL,
 	[BOARD_IDX] [int] NOT NULL,
 	[ORIGINAL_FILE_NAME] [nvarchar](260) NOT NULL,
-	[STORED_FILE_NAME] [nvarchar](40) NOT NULL,
+	[STORED_FILE_NAME] [nvarchar](36) NOT NULL,
 	[FILE_SIZE] [int] NULL,
 	[CREA_DTM] [date] NOT NULL,
 	[CREA_ID] [nvarchar](30) NOT NULL,
@@ -20,5 +20,4 @@ GO
 
 ALTER TABLE [dbo].[OKSUSU_FILE] ADD  DEFAULT ('N') FOR [DEL_GB]
 GO
-
 

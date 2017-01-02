@@ -20,5 +20,3 @@ GO
 
 ALTER TABLE [dbo].[OKSUSU_BOARD] ADD  DEFAULT (getdate()) FOR [CREA_DTM]
 GO
-
-
