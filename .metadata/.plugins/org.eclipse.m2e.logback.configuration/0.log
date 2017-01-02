@@ -15,3 +15,40 @@
 2017-01-02 10:12:43,621 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2017-01-02 10:12:43,623 [Worker-109] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2017-01-02 10:12:43,623 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/hero/GitHub/oksusu/Oksusu/src/test/resources
+2017-01-02 10:18:35,747 [Worker-109] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.company:first:1.0.0-BUILD-SNAPSHOT @ /Users/hero/GitHub/oksusu/Oksusu/pom.xml.
+2017-01-02 10:18:38,010 [Worker-109] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:18:38,012 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 8 resources
+2017-01-02 10:18:38,030 [Worker-109] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:18:38,031 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/hero/GitHub/oksusu/Oksusu/src/test/resources
+2017-01-02 10:18:39,038 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:18:39,040 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 8 resources
+2017-01-02 10:18:39,045 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:18:39,045 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/hero/GitHub/oksusu/Oksusu/src/test/resources
+2017-01-02 10:18:39,343 [Worker-109] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:18:39,344 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 8 resources
+2017-01-02 10:18:39,347 [Worker-109] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:18:39,348 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/hero/GitHub/oksusu/Oksusu/src/test/resources
+2017-01-02 10:18:39,635 [Worker-114] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:18:39,636 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 8 resources
+2017-01-02 10:18:39,642 [Worker-114] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:18:39,642 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/hero/GitHub/oksusu/Oksusu/src/test/resources
+2017-01-02 10:18:40,042 [Worker-116] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:18:40,044 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 8 resources
+2017-01-02 10:18:40,048 [Worker-116] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:18:40,048 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/hero/GitHub/oksusu/Oksusu/src/test/resources
+2017-01-02 10:18:40,277 [Worker-115] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:18:40,278 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 8 resources
+2017-01-02 10:18:40,282 [Worker-115] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:18:40,283 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/hero/GitHub/oksusu/Oksusu/src/test/resources
+2017-01-02 10:18:40,531 [Worker-111] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:18:40,532 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 8 resources
+2017-01-02 10:18:40,536 [Worker-111] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:18:40,537 [Worker-111] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/hero/GitHub/oksusu/Oksusu/src/test/resources
+2017-01-02 10:18:40,936 [Worker-109] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:18:40,936 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 8 resources
+2017-01-02 10:18:40,953 [Worker-109] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:18:40,954 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/hero/GitHub/oksusu/Oksusu/src/test/resources
+2017-01-02 10:21:07,820 [Worker-47] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:21:07,826 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-02 10:21:07,836 [Worker-47] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:21:07,836 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/hero/GitHub/oksusu/Oksusu/src/test/resources
