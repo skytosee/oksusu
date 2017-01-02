@@ -1,0 +1,13 @@
+2017-01-02 10:00:35,385 [Worker-6] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.company:first:1.0.0-BUILD-SNAPSHOT @ /Users/hero/GitHub/oksusu/Oksusu/pom.xml.
+2017-01-02 10:00:38,378 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:00:38,420 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 8 resources
+2017-01-02 10:00:38,443 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:00:38,446 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/hero/GitHub/oksusu/Oksusu/src/test/resources
+2017-01-02 10:01:24,396 [Worker-63] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:01:24,403 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 8 resources
+2017-01-02 10:01:24,408 [Worker-63] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:01:24,409 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/hero/GitHub/oksusu/Oksusu/src/test/resources
+2017-01-02 10:01:26,064 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:01:26,068 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 8 resources
+2017-01-02 10:01:26,070 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-02 10:01:26,071 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/hero/GitHub/oksusu/Oksusu/src/test/resources
